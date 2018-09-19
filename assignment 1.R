@@ -7,15 +7,19 @@ x
 y
 z
 x*z
+#This seems like a step you didn't need to do
 a<-c(25,50,75,125,150)
 y*z
+#This seems like a step you didn't need to do
 b<-c(-5,NA,375,15,40)
 print(a)
 print(b)
 y<-ifelse(test=is.na(y)==T,yes=2.5,no=y)
 print(y)
+#This line doesn't do anything
 load(Data/Assignment_1.csv)
 prb<-read.csv(Data/Assignment_1.csv)
+#This is where you bring in the data
 mydata<-read.csv("https://raw.githubusercontent.com/mattdemography/EDU_7043/master/Data/Assignment_1.csv")
 print(mydata)
 head(mydata,n=10)
@@ -23,11 +27,16 @@ tbl[1:10,1]
 tbl[1:10,1]
 tbl<-read.csv("https://raw.githubusercontent.com/mattdemography/EDU_7043/master/Data/Assignment_1.csv")
 tbl[1:10,1]
+#Why did you exclude DC? -5 
 mean(tbl[1:50,3])
+#Another way to get the same thing mean(tbl$Murder)
+#Why exclude DC? -5
 median(tbl[1:50,3])
+
 subMN=subset(subMN,State=="CT"|State=="MA"|State=="ME"|State=="NH"|State=="RI"|State=="VT")
 newdata<-subset(mydata)
 newdata<-subsetMM
+
 subsetMM<-subset(mydata,State=="CT"|State=="MA"|State=="ME"|State=="NH"|State=="RI"|State=="VT")
 mean(subsetMM[1:6,3])
 mean(subsetMM[1:6,2])
@@ -36,4 +45,7 @@ mean(newEnglandVcrime, na.rm = T)
 newEnglandVcrime
 subsetMM[1:6,3]
 subsetMM[1:6,2]
+#Violent crime in the U.S. not in NE
 mean(as.numeric(levels(subsetMM[1:6,2])[subsetMM[1:6,2]]))
+
+#90 out of 100
